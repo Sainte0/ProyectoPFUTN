@@ -1,0 +1,116 @@
+body{
+  background-color: bisque;
+  margin-top: 20px;
+}
+
+.app {
+  height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column; /* Ajuste para que el formulario esté debajo de los libros */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+
+  .addHome {
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    margin-bottom: 50px;
+  }
+
+  .books {
+    display: flex;
+
+    .book {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      button {
+        padding: 10px; /* Ajuste para que el botón tenga un padding uniforme */
+        background-color: white;
+        cursor: pointer;
+
+        &.delete {
+          border: 1px solid rgb(245, 191, 191);
+          color: rgb(242, 100, 100);
+        }
+
+        &.update {
+          border: 1px solid rgb(204, 204, 243);
+          color: rgb(139, 139, 234);
+        }
+      }
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto; /* Centra el formulario */
+
+    input,
+    textarea,
+    button {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid gray;
+    }
+
+    button {
+      background-color: teal;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.field label {
+  display: block;
+  font-size: 12px;
+  color: #777;
+}
+
+.field input {
+  display: block;
+  width: 100%; /* Ocupa el ancho completo del contenedor */
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 100%; /* Ocupa el ancho completo del contenedor */
+  padding: 6px 30px;
+  font-size: 14px;
+  background-color: #4460AA;
+  color: #fff;
+  border: none;
+}
